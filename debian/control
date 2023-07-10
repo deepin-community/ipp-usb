@@ -1,15 +1,39 @@
-Source: template-repository
-Section: unknown
+Source: ipp-usb
+Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Uploaders: Thorsten Alteholz <debian@alteholz.de>
+Section: comm
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-golang,
+ golang-github-openprinting-goipp-dev,
+ golang-go (>= 2:1.14~2) | golang-any,
+ libavahi-client-dev,
+ libavahi-common-dev,
+ libusb-1.0-0-dev,
+ pkg-config,
+ ronn,
+Standards-Version: 4.6.0
+Rules-Requires-Root: no
+Homepage: https://github.com/OpenPrinting/ipp-usb
+Vcs-Browser: https://salsa.debian.org/printing-team/ipp-usb
+Vcs-Git: https://salsa.debian.org/printing-team/ipp-usb.git
+XS-Go-Import-Path: github.com/OpenPrinting/ipp-usb
 
-Package: template-repository
+Package: ipp-usb
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Depends:
+ avahi-daemon,
+ ${misc:Depends},
+ ${shlibs:Depends},
+Built-Using:
+ ${misc:Built-Using},
+Multi-Arch: foreign
+Description: Daemon for IPP over USB printer support
+ ipp-usb is a userland driver for USB devices (printers, scanners, MFC),
+ supporting the IPP over USB protocol. It enables these USB devices to
+ be seen as regular network printers.
+ .
+ It is designed to be a replacement of ippusbxd daemon, previously
+ used for this purpose. It has a greatly rethought architecture, in
+ comparison with ippusbxd, and fixes all of its major flaws and issues.

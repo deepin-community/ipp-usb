@@ -1,4 +1,16 @@
 #!/usr/bin/make -f
 
+export DH_OPTIONS
+
 %:
-	dh $@
+	dh $@ --builddirectory=_build --buildsystem=golang --with=golang
+
+execute_after_dh_auto_build:
+	make man
+
+override_dh_auto_install:
+	mv _build/bin/ipp-usb ipp-usb
+	DESTDIR=$(CURDIR)/debian/ipp-usb make install
+
+execute_after_dh_auto_clean:
+	rm -f *.8 ipp-usb

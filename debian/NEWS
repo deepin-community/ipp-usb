@@ -1,0 +1,14 @@
+ipp-usb (0.9.17-3) unstable; urgency=medium
+
+  ipp-usb uses the IPP-over-USB protocol to allow the setting up of a
+  driverless print queue for most USB connected modern multi-function
+  and a few modern USB-only devices. The default is to auto-setup the
+  queue with cups-browsed.
+
+  Existing or newly created queues on a USB connection for IPP-over-USB
+  capable devices using vendor drivers will not work while the ipp-usb
+  service is activated and managing the connection. Details are at
+
+  https://wiki.debian.org/CUPSDriverlessPrinting
+
+ -- Brian Potkin <claremont102@gmail.com>  Fri, 05 Mar 2021 16:40:13 +0100
