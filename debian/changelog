@@ -1,5 +1,138 @@
-template-repository (1.0-1) unstable; urgency=medium
+ipp-usb (0.9.23-1) unstable; urgency=medium
 
-  * Initial release
+  * Update to new upstream version 0.9.23.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Thorsten Alteholz <debian@alteholz.de>  Wed, 07 Dec 2022 12:26:08 +0100
+
+ipp-usb (0.9.22-1) unstable; urgency=medium
+
+  * Update to new upstream version 0.9.22.
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Wed, 15 Jun 2022 22:16:32 +0200
+
+ipp-usb (0.9.21-1) unstable; urgency=medium
+
+  * Update to new upstream version 0.9.21.
+    (Closes: #1009188)
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Sat, 07 May 2022 11:20:34 +0200
+
+ipp-usb (0.9.20-1) unstable; urgency=medium
+
+  * Update to new upstream version 0.9.20.
+  * debian/control: add myself to Uploaders:
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Sat, 26 Mar 2022 11:19:43 +0100
+
+ipp-usb (0.9.19-2) unstable; urgency=medium
+
+  * Migrate to unstable
+  * S-V: Update to 4.6.0 without changes needed
+  * Remove myself from Uploaders
+
+ -- Didier Raboud <odyx@debian.org>  Fri, 03 Sep 2021 09:10:00 +0200
+
+ipp-usb (0.9.19-1) experimental; urgency=low
+
+  * New 0.9.19 upstream release
+
+ -- Didier Raboud <odyx@debian.org>  Fri, 04 Jun 2021 10:50:37 +0200
+
+ipp-usb (0.9.18-1) experimental; urgency=low
+
+  * New 0.9.18 upstream release
+
+ -- Didier Raboud <odyx@debian.org>  Sun, 16 May 2021 14:26:12 +0200
+
+ipp-usb (0.9.17-3) unstable; urgency=medium
+
+  * Add a NEWS entry to clarify ipp-usb's purpose (Closes: #978561)
+
+ -- Brian Potkin <claremont102@gmail.com>  Fri, 05 Mar 2021 16:40:13 +0100
+
+ipp-usb (0.9.17-2) unstable; urgency=medium
+
+  * Let ipp-usb be Multi-Arch: foreign (Closes: #980217)
+
+ -- Didier Raboud <odyx@debian.org>  Sun, 21 Feb 2021 18:02:51 +0100
+
+ipp-usb (0.9.17-1) unstable; urgency=medium
+
+  * New 0.9.17 upstream release
+
+ -- Didier Raboud <odyx@debian.org>  Sun, 07 Feb 2021 15:06:56 +0100
+
+ipp-usb (0.9.16-1) unstable; urgency=medium
+
+  * New 0.9.16 upstream release
+
+ -- Didier Raboud <odyx@debian.org>  Wed, 30 Dec 2020 14:11:12 +0100
+
+ipp-usb (0.9.15-2) unstable; urgency=medium
+
+  * Use upstream author's patch to fix #978348 FTBFS
+
+ -- Didier Raboud <odyx@debian.org>  Tue, 29 Dec 2020 18:39:35 +0100
+
+ipp-usb (0.9.15-1) unstable; urgency=medium
+
+  * New 0.9.15 upstream release
+    - Add heiner99's patch to fix FTBFS (Closes: #978348)
+
+ -- Didier Raboud <odyx@debian.org>  Mon, 28 Dec 2020 17:01:03 +0100
+
+ipp-usb (0.9.14-2) unstable; urgency=medium
+
+  * Set Type=simple in ipp-usb.service to fix restart handling
+    (Closes: #973951)
+
+ -- Didier Raboud <odyx@debian.org>  Sun, 22 Nov 2020 15:39:49 +0100
+
+ipp-usb (0.9.14-1) unstable; urgency=medium
+
+  * New 0.9.14 upstream release
+    - Patch away the install-to-all make dependency
+
+ -- Didier Raboud <odyx@debian.org>  Sat, 10 Oct 2020 17:37:37 +0200
+
+ipp-usb (0.9.13-1) unstable; urgency=medium
+
+  * New 0.9.13 upstream release
+    - Drop patch merged upstream
+  * B-D on golang-go primarily (falls back on golang-any), to facilitate
+    landing in Ubuntu main
+
+ -- Didier Raboud <odyx@debian.org>  Tue, 25 Aug 2020 18:58:59 +0200
+
+ipp-usb (0.9.12-1) unstable; urgency=medium
+
+  * New 0.9.12 upstream release
+  * Add patch to read ipp-usb.conf from testdata repository
+
+ -- Didier Raboud <odyx@debian.org>  Mon, 24 Aug 2020 09:18:02 +0200
+
+ipp-usb (0.9.10-3) unstable; urgency=medium
+
+  * Add avahi-daemon Depends as the systemd unit has
+    Wants=avahi-daemon.service (Closes: #968568)
+
+ -- Didier Raboud <odyx@debian.org>  Thu, 20 Aug 2020 20:24:53 +0200
+
+ipp-usb (0.9.10-2) unstable; urgency=medium
+
+  * Set upstream metadata fields: Repository, Repository-Browse
+
+ -- Didier Raboud <odyx@debian.org>  Wed, 22 Jul 2020 08:17:16 +0200
+
+ipp-usb (0.9.10-1) unstable; urgency=medium
+
+  * New 0.9.10 upstream version
+    - Drop patches included upstream
+
+ -- Didier Raboud <odyx@debian.org>  Thu, 16 Jul 2020 17:35:45 +0200
+
+ipp-usb (0.9.9-1) unstable; urgency=medium
+
+  * Initial release (Closes: #961218)
+
+ -- Didier Raboud <odyx@debian.org>  Fri, 10 Jul 2020 11:22:31 +0200
